@@ -1,0 +1,6 @@
+BrowseInfo/
+EWARM/20230914_mcu_slave/
+EWARM/settings/
+*.dep
+*.ewt
+Backup of *
