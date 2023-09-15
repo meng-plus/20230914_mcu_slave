@@ -61,6 +61,12 @@ void Error_Handler(void);
 #define Y7_GPIO_Port GPIOC
 #define X0_Pin GPIO_PIN_0
 #define X0_GPIO_Port GPIOA
+#define ADC1_Pin GPIO_PIN_1
+#define ADC1_GPIO_Port GPIOA
+#define ADC2_Pin GPIO_PIN_2
+#define ADC2_GPIO_Port GPIOA
+#define LED_Pin GPIO_PIN_3
+#define LED_GPIO_Port GPIOA
 #define Y3_Pin GPIO_PIN_4
 #define Y3_GPIO_Port GPIOA
 #define Y4_Pin GPIO_PIN_5

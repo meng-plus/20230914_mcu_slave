@@ -4,3 +4,4 @@ EWARM/settings/
 *.dep
 *.ewt
 Backup of *
+.vscode/
