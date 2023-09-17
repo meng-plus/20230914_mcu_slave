@@ -24,6 +24,7 @@ extern "C"
         MOTOR_FORWARD,     /*!< 正转 */
         MOTOR_REVERSE,     /*!< 反转 */
         MOTOR_STOP,        /*!<短路刹车 */
+        MOTOR_PER,         /*!< 比例模式 */
     } MOTOR_CTRL_E;
 
     /**
@@ -34,6 +35,12 @@ extern "C"
 
     void motor_ctrl(MOTOR_CTRL_E ctrl);
     MOTOR_CTRL_E motor_get_ctrl();
+    /**
+     * @brief 通过百分比控制电机 -100% ~100%
+     *
+     * @param per
+     */
+    void motor_set_speed(float per);
 #ifdef __cplusplus
 }
 #endif

@@ -4,6 +4,7 @@
 typedef struct _MOTOR_DATA
 {
     MOTOR_CTRL_E ctrl;
+    float per;
 } motor_data_t;
 static motor_data_t s_motor_data = {
     .ctrl = MOTOR_IDLE};
@@ -29,4 +30,11 @@ void motor_ctrl(MOTOR_CTRL_E ctrl)
 MOTOR_CTRL_E motor_get_ctrl()
 {
     return s_motor_data.ctrl;
+}
+
+void motor_set_speed(float per)
+{
+    motor_port_set_speed(per);
+    s_motor_data.ctrl = MOTOR_PER;
+    s_motor_data.per = per;
 }
