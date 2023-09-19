@@ -8,8 +8,8 @@
  * @copyright Copyright (c) 2023
  *
  */
-#ifndef __EFSM_TASK1_H_
-#define __EFSM_TASK1_H_
+#ifndef __EFSM_TASK_0_H_
+#define __EFSM_TASK_0_H_
 
 #include "efsm.h"
 
@@ -17,16 +17,13 @@
 extern "C"
 {
 #endif
-    typedef enum
+    typedef enum __EVENT_TASK1
     {
-        EFSM_EVENT_IDLE,
-        EFSM_EVENT_TICK,
-        EFSM_EVENT_START,
-        EFSM_EVENT_STOP,
-        EFSM_EVENT_PREV,
-        EFSM_EVENT_NEXT,
-    } task_EVENT_T;
+        EFSM_EVENT_S1 = EFSM_EVENT_USER,
+        EFSM_EVENT_S2,
+    } EVENT_TASK1_T;
 
+    extern efsm_manage_t efsm_task_0;
 #ifdef __cplusplus
 }
 #endif

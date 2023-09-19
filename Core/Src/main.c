@@ -45,7 +45,7 @@
 
 /* USER CODE BEGIN PV */
 
-systemParam_t sysram_t; /*!< 全局运行数据 */
+systemParam_t g_sysRam; /*!< 全局运行数据 */
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/

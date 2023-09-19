@@ -1,6 +1,6 @@
 #include "main.h"
-
- extern "C" void task_1ms()
+#include "efsm_task_0.h"
+void task_1ms()
 {
 
     uint32_t tick_cur = HAL_GetTick();
@@ -11,6 +11,16 @@
             return;
         }
         tick_next = tick_cur + 1;
+
+        { /*!< init  */
+            bool init_ok = 0;
+            if (!init_ok)
+            {
+                efsm_init(&efsm_task_0);
+                EFSM_EVENT_T event = EFSM_EVENT_IDLE;
+                efsm_action(&efsm_task_0, &event);
+            }
+        }
 
         /** 获得方向输入 */
         uint16_t input_data_cur = 0;
@@ -88,7 +98,7 @@
             }
             break;
         /** 第二步 */
-        case 0x06:
+        case 0x07:
             if (GPIO_PIN_RESET == HAL_GPIO_ReadPin(X3_GPIO_Port, X3_Pin))
             {
                 status++;
