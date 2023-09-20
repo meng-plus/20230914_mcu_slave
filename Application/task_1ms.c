@@ -13,9 +13,10 @@ void task_1ms()
         tick_next = tick_cur + 1;
 
         { /*!< init  */
-            bool init_ok = 0;
+          static  bool init_ok = 0;
             if (!init_ok)
             {
+                init_ok=1;
                 efsm_init(&efsm_task_0);
                 EFSM_EVENT_T event = EFSM_EVENT_IDLE;
                 efsm_action(&efsm_task_0, &event);

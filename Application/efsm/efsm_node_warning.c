@@ -23,12 +23,14 @@ efsm_node_t efsm_node_warning = {
     .action = action};
 void init()
 {
+    HAL_GPIO_WritePin(O_G_PORT, O_G_PIN, GPIO_PIN_RESET);
 }
 void tick()
 {
 }
 void exit()
 {
+    HAL_GPIO_WritePin(O_G_PORT, O_G_PIN, GPIO_PIN_SET);
 }
 bool action(efsm_manage_ptr parent_ptr, void *event_ptr)
 {

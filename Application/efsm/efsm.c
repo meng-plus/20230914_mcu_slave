@@ -18,7 +18,7 @@ void efsm_init(efsm_manage_ptr efsm_ptr)
 
 void efsm_action(efsm_manage_ptr efsm_ptr, void *event_ptr)
 {
-    EFSM_SAFE_RUN_ARGV(((efsm_node_ptr)efsm_ptr->it.current), action, efsm_ptr, event_ptr);
+    EFSM_SAFE_RUN_ARGV(efsm_ptr, action,  event_ptr);
 }
 void efsm_transfer(efsm_node_ptr curr, efsm_node_ptr next)
 {
