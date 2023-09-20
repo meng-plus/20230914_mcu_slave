@@ -356,6 +356,7 @@
                     <state>$PROJ_DIR$\..\Application\efsm\task_0</state>
                     <state>$PROJ_DIR$\..\Application\efsm</state>
                     <state>$PROJ_DIR$\..\Third_party\utils\list</state>
+                    <state>$PROJ_DIR$\..\Application</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1091,16 +1092,16 @@
             <group>
                 <name>task0</name>
                 <file>
-                    <name>$PROJ_DIR$\..\Application\efsm\task_0\efsm_node_0_A.c</name>
+                    <name>$PROJ_DIR$\..\Application\efsm\task_0\efsm_node_01_A.c</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\Application\efsm\task_0\efsm_node_0_BD.c</name>
+                    <name>$PROJ_DIR$\..\Application\efsm\task_0\efsm_node_02_BD.c</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\Application\efsm\task_0\efsm_node_0_C.c</name>
+                    <name>$PROJ_DIR$\..\Application\efsm\task_0\efsm_node_03_C.c</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\Application\efsm\task_0\efsm_node_0_E.c</name>
+                    <name>$PROJ_DIR$\..\Application\efsm\task_0\efsm_node_04_E.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Application\efsm\task_0\efsm_task_0.c</name>
@@ -1123,6 +1124,12 @@
             <name>EWARM</name>
             <file>
                 <name>$PROJ_DIR$\startup_stm32f103xb.s</name>
+            </file>
+        </group>
+        <group>
+            <name>motor_ctrl</name>
+            <file>
+                <name>$PROJ_DIR$\..\Application\motor_ctrl.c</name>
             </file>
         </group>
         <group>

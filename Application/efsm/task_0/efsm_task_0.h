@@ -11,8 +11,7 @@
 #ifndef __EFSM_TASK_0_H_
 #define __EFSM_TASK_0_H_
 
-#include "efsm.h"
-
+#include "task_def.h"
 #ifdef __cplusplus
 extern "C"
 {

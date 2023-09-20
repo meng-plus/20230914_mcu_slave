@@ -54,23 +54,29 @@
 #define Y_PIN(n) Y##n##_Pin
 
 #define O_F_PORT Y_PORT(0)
-#define O_F_PIN Y_PORT(0)
+#define O_F_PIN Y_PIN(0)
 #define O_G_PORT Y_PORT(1)
-#define O_G_PIN Y_PORT(1)
+#define O_G_PIN Y_PIN(1)
 #define O_A_PORT Y_PORT(2)
-#define O_A_PIN Y_PORT(2)
+#define O_A_PIN Y_PIN(2)
 #define O_B_PORT Y_PORT(3)
-#define O_B_PIN Y_PORT(3)
+#define O_B_PIN Y_PIN(3)
 #define O_C_PORT Y_PORT(4)
-#define O_C_PIN Y_PORT(4)
+#define O_C_PIN Y_PIN(4)
 #define O_D_PORT Y_PORT(5)
-#define O_D_PIN Y_PORT(5)
+#define O_D_PIN Y_PIN(5)
 #define O_E_PORT Y_PORT(6)
-#define O_E_PIN Y_PORT(6)
+#define O_E_PIN Y_PIN(6)
 
 #define O_MOTOR_WARNING_PORT Y_PORT(7)
-#define O_MOTOR_WARNING_PIN Y_PORT(7)
+#define O_MOTOR_WARNING_PIN Y_PIN(7)
 #define O_ERROR_PORT Y_PORT(8)
-#define O_ERROR_PIN Y_PORT(8)
+#define O_ERROR_PIN Y_PIN(8)
+
+typedef struct __GPIO
+{
+    GPIO_TypeDef* port;
+    uint16_t pin;
+} gpio_t;
 
 #endif //__PRODUCT_DEF_H_

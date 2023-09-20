@@ -32,6 +32,7 @@ extern "C"
     {
         uint16_t input_data; /*!< 输入信号 */
         uint8_t out_step;    /*!< 输出步骤[0,3] 4完成 */
+        uint8_t motor_ctrl;  /*!<  0:idle 1:checkself 2:auto 3:error  */
     } systemParam_t;
 
     extern systemParam_t g_sysRam;
